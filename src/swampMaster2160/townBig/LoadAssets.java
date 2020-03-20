@@ -9,6 +9,10 @@ public class LoadAssets {
 		try {
 			Assets.test0 = ImageIO.read(LoadAssets.class.getResource("/swampMaster2160/townBig/assets/test/test0.png"));
 			Assets.test1 = ImageIO.read(LoadAssets.class.getResource("/swampMaster2160/townBig/assets/test/test1.png"));
+			
+			Assets.road0 = ImageIO.read(LoadAssets.class.getResource("/swampMaster2160/townBig/assets/test/road0.png"));
+			
+			Assets.high0 = ImageIO.read(LoadAssets.class.getResource("/swampMaster2160/townBig/assets/test/high0.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
