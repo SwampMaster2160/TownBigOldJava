@@ -2,6 +2,7 @@ package swampMaster2160.townBig.loops;
 
 import java.awt.image.BufferedImage;
 
+import swampMaster2160.lib.text.SMString8;
 import swampMaster2160.townBig.Assets;
 
 import swampMaster2160.townBig.Window;
@@ -21,20 +22,20 @@ public class Frame extends Thread {
 			for(int y = 0; y < 10; y++) {
 				if ((x * y) % 3 < 2) {
 					//Window.graphic.drawImage(Assets.test0, (x * 64 + y * 64) / 2 + 100, (x * 64 - y * 64) / 4 + 300 + (int)(Tick100.time / 10) % 30, null);
-					renderTile(Assets.test0, x, y);
+					renderTile((BufferedImage)Assets.images.data[Assets.images.idFromName(new SMString8("test0"))], x, y);
 				}
 				else {
 					//Window.graphic.drawImage(Assets.test1, (x * 64 + y * 64) / 2 + 100, (x * 64 - y * 64) / 4 + 300 + (int)(Tick100.time / 10) % 30, null);
-					renderTile(Assets.test1, x, y);
+					renderTile((BufferedImage)Assets.images.data[Assets.images.idFromName(new SMString8("test1"))], x, y);
 				}
 				if(y == 3) {
 					//Window.graphic.drawImage(Assets.road0, (x * 64 + y * 64) / 2 + 100, (x * 64 - y * 64) / 4 + 300 + (int)(Tick100.time / 10) % 30, null);
-					renderTile(Assets.road0, x, y);
+					renderTile((BufferedImage)Assets.images.data[Assets.images.idFromName(new SMString8("road0"))], x, y);
 				}
 				
 				if(x == 6 & y == 4) {
 					//Window.graphic.drawImage(Assets.high0, (x * 64 + y * 64) / 2 + 100, (x * 64 - y * 64) / 4 + 300 + (int)(Tick100.time / 10) % 30 - (Assets.high0.getHeight() - 32), null);
-					renderTile(Assets.high0, x, y);
+					renderTile((BufferedImage)Assets.images.data[Assets.images.idFromName(new SMString8("high0"))], x, y);
 				}
 			}
 		}
